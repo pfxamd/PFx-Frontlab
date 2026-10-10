@@ -1,9 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import type { FrontlabFiles } from '@pfxamd/frontlab-engine';
 import {
   ArrowUpRight, Check, ChevronDown, CircleHelp, Code2, Download, FileCode2,
   FolderOpen, Keyboard, LayoutGrid, Moon, MoreHorizontal, PanelBottom, Play,
-  Plus, Save, Settings2, Sun, Trash2, Upload, X
+  Plus, Sun, Trash2, Upload, X
 } from 'lucide-react';
 import { CodeEditor } from './editor/CodeEditor';
 import { Preview } from './features/Preview';
