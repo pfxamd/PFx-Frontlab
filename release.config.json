@@ -1,0 +1,23 @@
+{
+  "product": "PFx Frontlab",
+  "channel": "Alpha",
+  "baseline": "7b94d97e0ab5c71878e2c2b78a872d34fee4f697",
+  "baseVersion": "0.1.0",
+  "sourcePaths": [
+    "src",
+    "app",
+    "apps",
+    "public",
+    "assets",
+    "index.html",
+    "diagnostics",
+    "scripts",
+    "release.config.json",
+    "vite.config.ts",
+    "vite.config.js",
+    "package.json",
+    "package-lock.json",
+    "pnpm-lock.yaml",
+    ".github/workflows"
+  ]
+}

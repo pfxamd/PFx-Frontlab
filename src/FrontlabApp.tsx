@@ -1,3 +1,5 @@
+declare const __PFX_APP_RELEASE__: { version: string; channel: string; label: string; commit: string };
+
 import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   ArrowUpRight, Check, ChevronDown, CircleHelp, Code2, Download, FileCode2,
@@ -163,7 +165,7 @@ export function FrontlabApp() {
 
   return <div className="frontlab-shell">
     <header className="topbar">
-      <div className="brand-zone"><a href="https://pfxamd.com" target="_blank" rel="noreferrer" className="brand-icon" title="PFxamd"><img src={`${import.meta.env.BASE_URL}brand/logo.svg`} alt="PFxamd logo" /></a><span className="brand-divider"/><span className="wordmark">PFx <strong>Frontlab</strong></span><span className="alpha-badge">ALPHA 0.1</span></div>
+      <div className="brand-zone"><a href="https://pfxamd.com" target="_blank" rel="noreferrer" className="brand-icon" title="PFxamd"><img src={`${import.meta.env.BASE_URL}brand/logo.svg`} alt="PFxamd logo" /></a><span className="brand-divider"/><span className="wordmark">PFx <strong>Frontlab</strong></span><span className="alpha-badge">{__PFX_APP_RELEASE__.label}</span></div>
       <div className="topbar-center"><span className="app-section-name">WORKSPACE</span><span className="breadcrumb-slash">/</span><input className="project-title-input" maxLength={64} aria-label="Experiment name" value={active.title} onChange={event => updateProject({title: event.target.value})} /></div>
       <div className="topbar-right"><span className="save-indicator"><span className={`save-dot ${saved ? 'saved' : ''}`}/>{saved ? 'Saved locally' : 'Saving…'}</span><span className="topbar-separator"/><button className="header-tool theme-tool" title={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'} aria-label="Toggle color theme" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>{theme === 'dark' ? <Sun size={17}/> : <Moon size={17}/>}</button><button className="header-tool" title="Keyboard shortcuts" aria-label="Keyboard shortcuts" onClick={() => setHelpOpen(true)}><CircleHelp size={17}/></button><span className="topbar-separator"/><button className="run-primary" onClick={() => setRunSignal(s => s + 1)}><Play size={14} fill="currentColor"/><span>Run</span><kbd>⌘ ↵</kbd></button></div>
     </header>
